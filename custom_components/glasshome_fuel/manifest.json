@@ -1,0 +1,14 @@
+{
+  "domain": "glasshome_fuel",
+  "name": "Fuel Prices for GlassHome",
+  "after_dependencies": ["fuel_prices_uk"],
+  "codeowners": ["@krystianokris"],
+  "config_flow": true,
+  "documentation": "https://github.com/krystianokris/glasshome-fuel",
+  "integration_type": "service",
+  "iot_class": "cloud_polling",
+  "issue_tracker": "https://github.com/krystianokris/glasshome-fuel/issues",
+  "requirements": [],
+  "single_config_entry": true,
+  "version": "0.1.0"
+}

@@ -1,0 +1,79 @@
+search:
+  name: Search fuel prices
+  description: Read Fuel Prices UK stations near your Home Assistant home or a custom location. Returns data; no entities change.
+  fields:
+    source:
+      default: fuel_prices_uk
+      selector:
+        select:
+          options: [fuel_prices_uk, asda]
+    location_mode:
+      default: home
+      selector:
+        select:
+          options: [home, custom]
+    location:
+      required: false
+      example: City or full postcode
+      selector:
+        text:
+    country:
+      default: GB
+      selector:
+        select:
+          options: [GB, PL, DE, FR, IE]
+    radius:
+      default: 10
+      selector:
+        number:
+          min: 1
+          max: 100
+    unit:
+      default: mi
+      selector:
+        select:
+          options: [mi, km]
+    fuel:
+      default: E10
+      selector:
+        select:
+          options: [E10, E5, B7, SDV]
+    limit:
+      default: 5
+      selector:
+        number:
+          min: 1
+          max: 20
+    sort:
+      default: price
+      selector:
+        select:
+          options: [price, distance]
+
+map:
+  name: Station map
+  description: Google static map around home and the given stations, with pin positions. Needs a Google key set under Configure.
+  fields:
+    home:
+      required: true
+      example: '{"latitude": 52.57, "longitude": -0.24}'
+      selector:
+        object:
+    stations:
+      required: true
+      example: '[{"id": "1", "latitude": 52.55, "longitude": -0.23}]'
+      selector:
+        object:
+    radius:
+      required: true
+      default: 10
+      selector:
+        number:
+          min: 1
+          max: 100
+    unit:
+      required: true
+      default: mi
+      selector:
+        select:
+          options: [mi, km]

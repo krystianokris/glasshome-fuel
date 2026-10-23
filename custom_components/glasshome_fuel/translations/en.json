@@ -1,0 +1,28 @@
+{
+  "title": "Fuel Prices for GlassHome",
+  "config": {
+    "step": {
+      "user": {
+        "title": "Fuel Prices for GlassHome",
+        "description": "Connects the Fuel Prices UK integration to GlassHome fuel widgets. The Google Maps key is optional: add one with Maps Static API enabled to show the station map. It stays in Home Assistant. Fuel Finder credentials belong in Fuel Prices UK, not here.",
+        "data": {
+          "api_key": "Google Maps Static API key (optional)"
+        }
+      }
+    },
+    "abort": {
+      "already_configured": "Fuel Prices for GlassHome is already set up. Use Configure to change the Google key."
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "Google map",
+        "description": "Change or clear the Google Maps Static API key used for the station map.",
+        "data": {
+          "api_key": "Google Maps Static API key (optional)"
+        }
+      }
+    }
+  }
+}
